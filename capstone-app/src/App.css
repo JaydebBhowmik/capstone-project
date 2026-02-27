@@ -1,0 +1,20 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background: #282c34;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+button {
+  padding: 8px 15px;
+}
