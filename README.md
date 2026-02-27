@@ -18,25 +18,21 @@ Netlify
 
 ## Deployment Link
 
-## GitHub Repo:
-https://github.com/username/medicare-app
-
-## Screenshots Folder:
-https://github.com/username/medicare-app/tree/main/screenshots
-
-
 capstone-app/
 │
 ├── public/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.js
-│   │   ├── Home.js
-│   │   ├── Appointment.js
-│   │   ├── Notification.js
-│   │   ├── Reviews.js
-│   │   ├── Profile.js
-│   │   └── Footer.js
+src/
+├── components/
+│   ├── Navbar.js
+│   ├── Home.js
+│   ├── Signup.js
+│   ├── Login.js
+│   ├── Appointment.js
+│   ├── FindDoctorSearch.js
+│   ├── InstantConsultation.js
+│   ├── Notification.js
+│   ├── Reviews.js
+│   ├── Profile.js
 │   │
 │   ├── App.js
 │   ├── App.css
