@@ -1,34 +1,38 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 const Profile = () => {
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const { user } = useContext(AuthContext);
+
+  const [newName, setNewName] = useState("");
+
+  if (!user) {
+    return <h3>Please Login First</h3>;
+  }
 
   return (
     <div>
-      <h2>User Profile</h2>
+
+      {/* ✅ Welcome Message */}
+      <h2>Welcome {user.name} 👋</h2>
+
+      <h3>Profile Details</h3>
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
+
 
       <input
-        placeholder="Name"
-        onChange={(e)=>setName(e.target.value)}
+        placeholder="Change Name"
+        onChange={(e)=>setNewName(e.target.value)}
       />
 
-      <br /><br />
-
-      <input
-        placeholder="Email"
-        onChange={(e)=>setEmail(e.target.value)}
-      />
-
-      <br /><br />
+      <br/><br/>
 
       <button>
         Update Profile
       </button>
 
-      <p>Name: {name}</p>
-      <p>Email: {email}</p>
     </div>
   );
 };

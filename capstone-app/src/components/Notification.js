@@ -1,8 +1,19 @@
 import React from "react";
 
-const Notification = () => {
+const Notification = ({ message }) => {
+
+  if (!message) return null;
+
   return (
-    <h3>✅ Appointment Booked Successfully!</h3>
+    <div style={{
+      background: "#d4edda",
+      color: "#155724",
+      padding: "10px",
+      marginTop: "15px",
+      borderRadius: "5px"
+    }}>
+      🔔 {message}
+    </div>
   );
 };
 
